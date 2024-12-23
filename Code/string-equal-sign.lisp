@@ -13,3 +13,7 @@
       (null pos))))
 
 (declaim (notinline string=))
+
+(setf (documentation 'string= 'function)
+      (format nil
+              "Syntax: string= string1 string2  &key start1 end1 start2 end2"))
