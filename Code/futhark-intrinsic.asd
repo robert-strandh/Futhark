@@ -1,6 +1,6 @@
 (cl:in-package #:asdf-user)
 
-(defsystem "futhark"
+(defsystem "futhark-intrinsic"
   :serial t
   :components
   ((:file "packages")
