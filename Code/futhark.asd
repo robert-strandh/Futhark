@@ -3,4 +3,5 @@
 (defsystem "futhark"
   :serial t
   :components
-  ((:file "packages")))
+  ((:file "packages")
+   (:file "utilities")))
