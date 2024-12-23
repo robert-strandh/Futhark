@@ -3,6 +3,6 @@
 (defsystem "futhark-intrinsic"
   :serial t
   :components
-  ((:file "packages")
+  ((:file "packages-intrinsic")
    (:file "utilities")
    (:file "string-equal-sign")))
