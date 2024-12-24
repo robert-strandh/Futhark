@@ -12,4 +12,5 @@
    (:file "string-less-sign")
    (:file "string-lessp")
    (:file "string-greater-sign")
-   (:file "string-greaterp")))
+   (:file "string-greaterp")
+   (:file "string-less-or-equal-sign")))
