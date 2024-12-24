@@ -7,4 +7,5 @@
    (:file "utilities")
    (:file "string-equal-sign")
    (:file "string-equal")
-   (:file "string-not-equal-sign")))
+   (:file "string-not-equal-sign")
+   (:file "string-not-equal")))
