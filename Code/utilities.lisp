@@ -81,11 +81,6 @@
              :end end
              :target string))))
 
-(defmacro with-checked-bounding-indices
-    ((string-var start-var end-var) &body body)
-  `(progn (check-bounding-indices ,string-var ,start-var ,end-var)
-          ,@body))
-
 (defmacro with-canonicalized-and-checked-strings
     (((string1-var start1-var end1-var)
       (string2-var start2-var end2-var))
