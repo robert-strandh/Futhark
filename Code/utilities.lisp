@@ -1,5 +1,34 @@
 (cl:in-package #:futhark)
 
+(defmacro compare-body (name)
+  (multiple-value-bind (less-predicate-name equal-predicate-name)
+      (if (eq name '=)
+          (values 'char< 'char=)
+          (values 'char-lessp 'char-equal))
+    `(let ((index1 start1)
+           (index2 start2))
+       (block nil
+         (tagbody
+          again
+            (unless (= index1 end1)
+              (go 1-not-end))
+            (return (if (= index2 end2) '= '<))
+          1-not-end
+            (unless (= index2 end2)
+              (go neither-end))
+            (return (if (= index1 end1) '= '>))
+          neither-end
+            (cond ((,equal-predicate-name
+                    (char string1 index1) (char string2 index2))
+                   (incf index1)
+                   (incf index2)
+                   (go again))
+                  ((,less-predicate-name
+                    (char string1 index1) (char string2 index2))
+                   (return '<))
+                  (t
+                   (return '>))))))))
+
 ;;; Create a fresh string containing the characters of STRING in the
 ;;; interval between START and END.
 (defun extract-interval (string start end)
