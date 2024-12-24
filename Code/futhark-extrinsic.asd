@@ -5,4 +5,5 @@
   :components
   ((:file "packages-extrinsic")
    (:file "utilities")
-   (:file "string-equal-sign")))
+   (:file "string-equal-sign")
+   (:file "string-equal")))
