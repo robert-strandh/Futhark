@@ -29,6 +29,12 @@
                   (t
                    (return '>))))))))
 
+(defun compare-equal (string1 start1 end1 string2 start2 end2)
+  (compare-body equal))
+
+(defun compare= (string1 start1 end1 string2 start2 end2)
+  (compare-body =))
+
 ;;; Create a fresh string containing the characters of STRING in the
 ;;; interval between START and END.
 (defun extract-interval (string start end)
