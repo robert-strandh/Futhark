@@ -9,4 +9,5 @@
    (:file "string-equal")
    (:file "string-not-equal-sign")
    (:file "string-not-equal")
-   (:file "string-less-sign")))
+   (:file "string-less-sign")
+   (:file "string-lessp")))
