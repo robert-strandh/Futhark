@@ -3,7 +3,8 @@
 (defpackage #:futhark
   (:use #:common-lisp)
   (:shadow
-   . #1=(#:string=
+   . #1=(#:string
+         #:string=
          #:string-equal
          #:string/=
          #:string-not-equal
