@@ -3,7 +3,7 @@
 (declaim (inline nstring-upcase))
 
 (defun nstring-upcase (string &key (start 0) end)
-  (check-type string string)
+  (ensure-string-type string)
   (with-canonicalized-and-checked-string ((string start end))
     (for-each-relevant-character (character string start end)
       (setf character (char-upcase character))))

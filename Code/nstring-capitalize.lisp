@@ -3,7 +3,7 @@
 (declaim (inline nstring-capitalize))
 
 (defun nstring-capitalize (string &key (start 0) (end nil))
-  (check-type string string)
+  (ensure-string-type string)
   (let ((state nil))
     (with-canonicalized-and-checked-string ((string start end))
       (for-each-relevant-character (character string start end)
