@@ -17,4 +17,5 @@
    (:file "string-not-greaterp")
    (:file "string-greater-or-equal-sign")
    (:file "string-not-lessp")
-   (:file "nstring-upcase")))
+   (:file "nstring-upcase")
+   (:file "string-upcase")))
