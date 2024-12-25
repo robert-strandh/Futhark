@@ -106,3 +106,8 @@
                         ,end1-var)))
      (check-bounding-indices ,string1-var ,start1-var ,end1-var)
      ,@body))
+
+(defmacro ensure-fresh-string ((string-var) &body body)
+  `(let ((,string-var
+           (if (stringp ,string-var) (copy-seq ,string-var) ,string-var)))
+     ,@body))
