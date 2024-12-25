@@ -16,6 +16,10 @@
          #:string>=
          #:string-not-lessp
          #:nstring-upcase
-         #:string-upcase))
+         #:string-upcase
+         #:nstring-downcase
+         #:string-downcase
+         #:nstring-capitalize
+         #:string-capitalize))
   (:export
    . #1#))
