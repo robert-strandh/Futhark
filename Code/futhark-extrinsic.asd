@@ -22,4 +22,5 @@
    (:file "nstring-downcase")
    (:file "string-downcase")
    (:file "nstring-capitalize")
-   (:file "string-capitalize")))
+   (:file "string-capitalize")
+   (:file "condition-types")))
