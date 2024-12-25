@@ -83,12 +83,13 @@
 
 (defmacro with-canonicalized-and-checked-strings
     (((string1-var start1-var end1-var)
-      (string2-var start2-var end2-var))
+      &optional ((string2-var start2-var end2-var) '(nil nil nil) second))
      &body body)
   `(let ((,string1-var (string ,string1-var))
          (,end1-var (if (null ,end1-var) (length ,string1-var) ,end1-var))
          (,string2-var (string ,string2-var))
          (,end2-var (if (null ,end2-var) (length ,string2-var) ,end2-var)))
      (check-bounding-indices ,string1-var ,start1-var ,end1-var)
-     (check-bounding-indices ,string2-var ,start2-var ,end2-var)
+     ,(when second
+        `(check-bounding-indices ,string2-var ,start2-var ,end2-var))
      ,@body))
