@@ -14,6 +14,8 @@
          #:string<=
          #:string-not-greaterp
          #:string>=
-         #:string-not-lessp))
+         #:string-not-lessp
+         #:nstring-upcase
+         #:string-upcase))
   (:export
    . #1#))
