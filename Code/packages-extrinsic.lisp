@@ -4,6 +4,8 @@
   (:use #:common-lisp)
   (:shadow
    . #1=(#:string
+         #:stringp
+         #:make-string
          #:string=
          #:string-equal
          #:string/=

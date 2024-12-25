@@ -6,6 +6,8 @@
   ((:file "packages-extrinsic")
    (:file "utilities")
    (:file "string")
+   (:file "stringp")
+   (:file "make-string")
    (:file "string-equal-sign")
    (:file "string-equal")
    (:file "string-not-equal-sign")
