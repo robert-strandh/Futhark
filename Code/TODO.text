@@ -1,0 +1,34 @@
+c = code
+x = not supplied
+d = documentation
+m = compiler macro
+n = no compiler macro required.
+t = test
+
+c___ string
+c___ stringp
+c___ make-string
+c___ string=
+c___ string-equal
+c___ string/=
+c___ string-not-equal
+c___ string<
+c___ string-lessp
+c___ string>
+c___ string-greaterp
+c___ string<=
+c___ string-not-greaterp
+c___ string>=
+c___ string-not-lessp
+c___ nstring-upcase
+c___ string-upcase
+c___ nstring-downcase
+c___ string-downcase
+c___ nstring-capitalize
+c___ string-capitalize
+____ string-left-trim
+____ string-right-trim
+____ string-trim
+x___ simple-string-p
+x___ char
+x___ schar
