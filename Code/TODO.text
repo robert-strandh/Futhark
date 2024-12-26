@@ -10,7 +10,7 @@ c___ stringp
 c___ make-string
 c_m_ string=
 c_m_ string-equal
-c___ string/=
+c_m_ string/=
 c___ string-not-equal
 c___ string<
 c___ string-lessp
