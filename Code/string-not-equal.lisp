@@ -17,7 +17,7 @@
 
 (declaim (notinline string-not-equal))
 
-(define-compiler-macro stringnot-equal (&whole form &rest arguments)
+(define-compiler-macro string-not-equal (&whole form &rest arguments)
   (if (two-string-compiler-macro-possible-p arguments)
-      (compute-two-string-compiler-macro arguments 'stringnot-equal-core)
+      (compute-two-string-compiler-macro arguments 'string-not-equal-core)
       form))
