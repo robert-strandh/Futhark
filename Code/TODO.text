@@ -13,7 +13,7 @@ c_m_ string-equal
 c_m_ string/=
 c_m_ string-not-equal
 c_m_ string<
-c___ string-lessp
+c_m_ string-lessp
 c___ string>
 c___ string-greaterp
 c___ string<=
