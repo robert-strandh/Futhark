@@ -8,7 +8,7 @@ t = test
 c___ string
 c___ stringp
 c___ make-string
-c___ string=
+c_m_ string=
 c___ string-equal
 c___ string/=
 c___ string-not-equal
