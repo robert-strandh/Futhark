@@ -5,6 +5,7 @@
   :components
   ((:file "packages-extrinsic")
    (:file "utilities")
+   (:file "compiler-macro-support")
    (:file "string")
    (:file "stringp")
    (:file "make-string")
