@@ -16,3 +16,8 @@
   (string-equal-core string1 string2 start1 end1 start2 end2))
 
 (declaim (notinline string-equal))
+
+(define-compiler-macro string-equal (&whole form &rest arguments)
+  (if (two-string-compiler-macro-possible-p arguments)
+      (compute-two-string-compiler-macro arguments 'string-equal-core)
+      form))
