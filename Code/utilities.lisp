@@ -12,11 +12,15 @@
           again
             (unless (= index1 end1)
               (go 1-not-end))
-            (return (if (= index2 end2) '= '<))
+            (return (if (= index2 end2)
+                        (values '= nil)
+                        (values '< index1)))
           1-not-end
             (unless (= index2 end2)
               (go neither-end))
-            (return (if (= index1 end1) '= '>))
+            (return (if (= index1 end1)
+                        (values '= nil)
+                        (values '> index1)))
           neither-end
             (cond ((,equal-predicate-name
                     (char string1 index1) (char string2 index2))
@@ -25,9 +29,9 @@
                    (go again))
                   ((,less-predicate-name
                     (char string1 index1) (char string2 index2))
-                   (return '<))
+                   (return (values '< index1)))
                   (t
-                   (return '>))))))))
+                   (return (values '> index1)))))))))
 
 (defun compare-equal (string1 start1 end1 string2 start2 end2)
   (compare-body equal))
