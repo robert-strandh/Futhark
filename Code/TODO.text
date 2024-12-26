@@ -11,7 +11,7 @@ c___ make-string
 c_m_ string=
 c_m_ string-equal
 c_m_ string/=
-c___ string-not-equal
+c_m_ string-not-equal
 c___ string<
 c___ string-lessp
 c___ string>
