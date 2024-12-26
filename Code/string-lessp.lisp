@@ -17,3 +17,8 @@
   (string-lessp-core string1 string2 start1 end1 start2 end2))
 
 (declaim (notinline string-lessp))
+
+(define-compiler-macro string-lessp (&whole form &rest arguments)
+  (if (two-string-compiler-macro-possible-p arguments)
+      (compute-two-string-compiler-macro arguments 'string-lessp-core)
+      form))
