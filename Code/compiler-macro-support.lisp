@@ -5,31 +5,25 @@
         always (member keyword keywords :test #'eq)))
 
 (defun one-string-compiler-macro-possible-p (arguments)
-  ;; There must be at least one argument.
-  (unless (>= (length arguments) 1)
-    (return-from one-string-compiler-macro-possible-p nil))
-  ;; There must be one required argument and an even number of keyword
-  ;; arguments, so there must be an odd number of arguments.
-  (unless (oddp (length arguments))
-    (return-from one-string-compiler-macro-possible-p nil))
-  ;; Each keyword must be one of the ones allowed.
-  (unless (all-allowed-keywords-p (rest arguments) '(:start :end))
-    (return-from one-string-compiler-macro-possible-p nil))
-  t)
+  (and
+   ;; There must be at least one argument.
+   (>= (length arguments) 1)
+   ;; There must be one required argument and an even number of
+   ;; keyword arguments, so there must be an odd number of arguments.
+   (oddp (length arguments))
+   ;; Each keyword must be one of the ones allowed.
+   (all-allowed-keywords-p (rest arguments) '(:start :end))))
 
 (defun two-string-compiler-macro-possible-p (arguments)
-  ;; There must be at least two arguments.
-  (unless (>= (length arguments) 2)
-    (return-from two-string-compiler-macro-possible-p nil))
-  ;; There must be two required arguments and an even number of
-  ;; keyword arguments, so there must be an even number of arguments.
-  (unless (evenp (length arguments))
-    (return-from two-string-compiler-macro-possible-p nil))
-  ;; Each keyword must be one of the ones allowed.
-  (unless (all-allowed-keywords-p
-           (rest (rest arguments)) '(:start1 :end1 :start2 :end2))
-    (return-from two-string-compiler-macro-possible-p nil))
-  t)
+  (and
+   ;; There must be at least two arguments.
+   (>= (length arguments) 2)
+   ;; There must be two required arguments and an even number of
+   ;; keyword arguments, so there must be an even number of arguments.
+   (evenp (length arguments))
+   ;; Each keyword must be one of the ones allowed.
+   (all-allowed-keywords-p (rest (rest arguments))
+                           '(:start1 :end1 :start2 :end2))))
 
 (defun parameter-name-from-keyword (keyword)
   (intern (symbol-name keyword) '#:futhark))
