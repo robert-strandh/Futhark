@@ -1,5 +1,9 @@
 (cl:in-package #:futhark)
 
+(defun all-allowed-keywords-p (keyword-arguments keywords)
+  (loop for keyword in keyword-arguments by #'cddr
+        always (member keyword keywords :test #'eq)))
+
 (defun one-string-compiler-macro-possible-p (arguments)
   ;; There must be at least one argument.
   (unless (>= (length arguments) 1)
@@ -9,9 +13,8 @@
   (unless (oddp (length arguments))
     (return-from one-string-compiler-macro-possible-p nil))
   ;; Each keyword must be one of the ones allowed.
-  (loop for keyword in (cddr arguments) by #'cddr
-        unless (member keyword '(:start :end))
-          do (return-from one-string-compiler-macro-possible-p nil))
+  (unless (all-allowed-keywords-p (rest arguments) '(:start :end))
+    (return-from one-string-compiler-macro-possible-p nil))
   t)
 
 (defun two-string-compiler-macro-possible-p (arguments)
@@ -23,9 +26,9 @@
   (unless (evenp (length arguments))
     (return-from two-string-compiler-macro-possible-p nil))
   ;; Each keyword must be one of the ones allowed.
-  (loop for keyword in (cddr arguments) by #'cddr
-        unless (member keyword '(:start1 :end1 :start2 :end2))
-          do (return-from two-string-compiler-macro-possible-p nil))
+  (unless (all-allowed-keywords-p
+           (rest (rest arguments)) '(:start1 :end1 :start2 :end2))
+    (return-from two-string-compiler-macro-possible-p nil))
   t)
 
 (defun parameter-name-from-keyword (keyword)
