@@ -21,3 +21,23 @@
   (if (two-string-compiler-macro-possible-p arguments)
       (compute-two-string-compiler-macro arguments 'string-equal-core)
       form))
+
+(setf (documentation 'string-equal 'function)
+      (format nil
+              "Syntax: string= string1 string2 &key start1 end1 start2 end2~@
+               ~@
+               Return T if the designated intervals of the two~@
+               strings are equal.  Return NIL otherwise.~@
+               Comparison is done using the function CHAR-equal.~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *string1-and-string2-are-string-designators*
+              *this-function-calls-the-string-function*
+              *start1/2-and-end1/2-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))

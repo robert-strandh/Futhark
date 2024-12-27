@@ -9,7 +9,7 @@ c___ string
 c___ stringp
 c___ make-string
 cdm_ string=
-c_m_ string-equal
+cdm_ string-equal
 c_m_ string/=
 c_m_ string-not-equal
 c_m_ string<
