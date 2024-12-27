@@ -24,7 +24,7 @@
 
 (setf (documentation 'string-equal 'function)
       (format nil
-              "Syntax: string= string1 string2 &key start1 end1 start2 end2~@
+              "Syntax: string-equal string1 string2 &key start1 end1 start2 end2~@
                ~@
                Return T if the designated intervals of the two~@
                strings are equal.  Return NIL otherwise.~@
