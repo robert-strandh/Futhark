@@ -28,7 +28,7 @@
                ~@
                Return T if the designated intervals of the two~@
                strings are equal.  Return NIL otherwise.~@
-               Comparison is done using the function CHAR-equal.~@
+               Comparison is done using the function CHAR-EQUAL.~@
                ~@
                ~a~@
                ~@
