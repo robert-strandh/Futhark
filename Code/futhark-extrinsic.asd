@@ -6,6 +6,7 @@
   ((:file "packages-extrinsic")
    (:file "utilities")
    (:file "compiler-macro-support")
+   (:file "documentation-support")
    (:file "string")
    (:file "stringp")
    (:file "make-string")
