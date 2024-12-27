@@ -31,6 +31,11 @@
            for STRING1.  START2 and END2 must be bounding index~@
            designators for STRING2."))
 
+(defparameter *start-and-end-are-bounding-index-designators*
+  (format nil
+          "START and END must be bounding index designators~@
+           for STRING."))
+
 (defparameter *definition-of-bounding-index-designators*
   (format nil
           "Recall that two values S and E are valid bounding~@
