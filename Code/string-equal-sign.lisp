@@ -26,7 +26,7 @@
       (format nil
               "Syntax: string= string1 string2 &key start1 end1 start2 end2~@
                ~@
-               Return true if the designated intervals of the two~@
+               Return T if the designated intervals of the two~@
                strings are equal.  Comparison is done using the~@
                function CHAR=.~@
                ~@
