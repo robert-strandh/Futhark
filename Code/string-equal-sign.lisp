@@ -24,4 +24,20 @@
 
 (setf (documentation 'string= 'function)
       (format nil
-              "Syntax: string= string1 string2  &key start1 end1 start2 end2"))
+              "Syntax: string= string1 string2 &key start1 end1 start2 end2~@
+               ~@
+               Return true if the designated intervals of the two~@
+               strings are equal.  Comparison is done using the~@
+               function CHAR=.~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *string1-and-string2-are-string-designators*
+              *this-function-calls-the-string-function*
+              *start1/2-and-end1/2-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
