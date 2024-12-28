@@ -17,8 +17,8 @@ cdm_ string-lessp
 c_m_ string>
 c_m_ string-greaterp
 c_m_ string<=
-c___ string-not-greaterp
-c___ string>=
+c_m_ string-not-greaterp
+c_m_ string>=
 c___ string-not-lessp
 c___ nstring-upcase
 c___ string-upcase
