@@ -23,7 +23,7 @@ c_m_ string-not-lessp
 c_m_ nstring-upcase
 c_m_ string-upcase
 c_m_ nstring-downcase
-c___ string-downcase
+c_m_ string-downcase
 c___ nstring-capitalize
 c___ string-capitalize
 ____ string-left-trim
