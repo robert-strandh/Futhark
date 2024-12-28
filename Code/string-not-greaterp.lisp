@@ -18,7 +18,7 @@
 
 (declaim (notinline string-not-greaterp))
 
-(define-compiler-macro string-not-greaterp form &rest arguments)
+(define-compiler-macro string-not-greaterp (&whole form &rest arguments)
   (if (two-string-compiler-macro-possible-p arguments)
       (compute-two-string-compiler-macro
        arguments 'string-not-greaterp-core)
