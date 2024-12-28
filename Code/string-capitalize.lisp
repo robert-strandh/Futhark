@@ -2,7 +2,7 @@
 
 (declaim (inline string-capitalize))
 
-(defun string-capitalize (string &key (start 0) (end nil))
+(defun string-capitalize-core (string start end)
   (ensure-fresh-string (string)
     (let ((state nil)) 
       (with-canonicalized-and-checked-string ((string start end))
@@ -17,3 +17,15 @@
     string))
 
 (declaim (notinline string-capitalize))
+
+(declaim (inline string-capitalize))
+
+(defun string-capitalize (string &key (start 0) (end nil))
+  (string-capitalize-core string start end))
+
+(declaim (notinline string-capitalize))
+
+(define-compiler-macro string-capitalize (&whole form &rest arguments)
+  (if (one-string-compiler-macro-possible-p arguments)
+      (compute-one-string-compiler-macro arguments 'string-capitalize-core)
+      form))
