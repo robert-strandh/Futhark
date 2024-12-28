@@ -25,5 +25,5 @@
 
 (define-compiler-macro nstring-capitalize (&whole form &rest arguments)
   (if (one-string-compiler-macro-possible-p arguments)
-      (compute-one-string-compiler-macro arguments 'nstring-capitalize)
+      (compute-one-string-compiler-macro arguments 'nstring-capitalize-core)
       form))

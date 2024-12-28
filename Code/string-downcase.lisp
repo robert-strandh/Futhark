@@ -20,5 +20,5 @@
 
 (define-compiler-macro string-downcase (&whole form &rest arguments)
   (if (one-string-compiler-macro-possible-p arguments)
-      (compute-one-string-compiler-macro arguments 'string-downcase)
+      (compute-one-string-compiler-macro arguments 'string-downcase-core)
       form))

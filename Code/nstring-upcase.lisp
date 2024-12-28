@@ -20,5 +20,5 @@
 
 (define-compiler-macro nstring-upcase (&whole form &rest arguments)
   (if (one-string-compiler-macro-possible-p arguments)
-      (compute-one-string-compiler-macro arguments 'nstring-upcase)
+      (compute-one-string-compiler-macro arguments 'nstring-upcase-core)
       form))
