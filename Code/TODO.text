@@ -24,7 +24,7 @@ c_m_ nstring-upcase
 c_m_ string-upcase
 c_m_ nstring-downcase
 c_m_ string-downcase
-c___ nstring-capitalize
+c_m_ nstring-capitalize
 c___ string-capitalize
 ____ string-left-trim
 ____ string-right-trim
