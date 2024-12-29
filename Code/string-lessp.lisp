@@ -29,7 +29,7 @@
                ~@
                ~a  Otherwise, this function returns NIL.~@
                The characters are compared using the function~@
-               CHAR-LESSP.
+               CHAR-LESSP.~@
                ~@
                ~a~@
                ~@
