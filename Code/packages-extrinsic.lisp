@@ -23,6 +23,9 @@
          #:nstring-downcase
          #:string-downcase
          #:nstring-capitalize
-         #:string-capitalize))
+         #:string-capitalize
+         #:string-left-trim
+         #:string-right-trim
+         #:string-trim))
   (:export
    . #1#))
