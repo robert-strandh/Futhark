@@ -22,3 +22,24 @@
   (if (two-string-compiler-macro-possible-p arguments)
       (compute-two-string-compiler-macro arguments 'string>-core)
       form))
+
+(setf (documentation 'string> 'function)
+      (format nil
+              "Syntax: string> string1 string2 &key start1 end1 start2 end2~@
+               ~@
+               ~a  Otherwise, this function returns NIL.~@
+               The characters are compared using the function~@
+               CHAR>.
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *a-string-is-greater*
+              *string1-and-string2-are-string-designators*
+              *this-function-calls-the-string-function*
+              *start1/2-and-end1/2-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
