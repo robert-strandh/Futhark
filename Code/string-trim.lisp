@@ -16,7 +16,7 @@
         (if (or (= end start) (null (find character character-bag)))
             (return-from b)
             (decf end))))
-    (extract-interval string start end)))
+    (subseq string start end)))
 
 (declaim (notinline string-trim))
 

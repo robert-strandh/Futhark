@@ -39,23 +39,13 @@
 (defun compare= (string1 start1 end1 string2 start2 end2)
   (compare-body =))
 
-;;; Create a fresh string containing the characters of STRING in the
-;;; interval between START and END.
-(defun extract-interval (string start end)
-  (let ((result (make-string (- end start))))
-    (loop for source-index from start below end
-          for destination-index from 0
-          do (setf (char result destination-index)
-                   (char string source-index)))
-    result))
-
 (defun string-designator-to-fresh-string (string-designator)
   (let ((string (string string-designator)))
     (if (characterp string-designator)
         ;; The string is already freshly allocated, so there
         ;; is no need to copy it again.
         string
-        (extract-interval string 0 (length string)))))
+        (subseq string 0 (length string)))))
 
 (defmacro for-each-relevant-character
     ((character-var string-form start-form end-form &key from-end) &body body)
