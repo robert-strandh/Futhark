@@ -29,4 +29,5 @@
    (:file "nstring-capitalize")
    (:file "string-capitalize")
    (:file "string-left-trim")
+   (:file "string-right-trim")
    (:file "condition-types")))
