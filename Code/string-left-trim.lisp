@@ -14,3 +14,15 @@
     (extract-interval string start end)))
 
 (declaim (notinline string-left-trim))
+
+(setf (documentation 'string-left-trim 'function)
+      (format nil
+              "Syntax: string-left-trim character-bag string~@
+               ~@
+               Return a string which is like STRING except that~@
+               characters at the beinning of STRING that are in~@
+               CHARACTER-BAG have been removed.~@
+               ~@
+               CHARACTER-BAG is a sequence containing characters.~@
+               ~@
+               This function always returns a fresh string."))
