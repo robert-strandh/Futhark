@@ -28,4 +28,5 @@
    (:file "string-downcase")
    (:file "nstring-capitalize")
    (:file "string-capitalize")
+   (:file "string-left-trim")
    (:file "condition-types")))
