@@ -45,6 +45,19 @@
            or equal to E.  The interval designated is the one~@
            that starts with index S and ends with index E-1."))
 
+(defparameter *a-string-is-less*
+  (format nil
+          "A string A is less than a string B if in the first~@
+           position in which they differ, the character of A~@
+           is less than the corresponding character of B, or~@
+           if A is a proper prefix of B.  If the interval of~@
+           STRING1 designated by START1 and END1 is less than~@
+           the interval of STRING2 designated by START2 and END2~@
+           according to this definition, then this function returns~@
+           the index of the first position at which the two~@
+           intervals differ, as a an offset from the start of~@
+           STRING1."))
+
 (defparameter *a-string-is-greater*
   (format nil
           "A string A is greater than a string B if in the first~@
