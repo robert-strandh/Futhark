@@ -1,5 +1,7 @@
 (cl:in-package #:futhark)
 
+(declaim (inline string-trim))
+
 (defun string-trim (character-bag string-designator)
   (let* ((string (string string-designator))
          (start 0)
@@ -15,3 +17,5 @@
             (return-from b)
             (decf end))))
     (extract-interval string start end)))
+
+(declaim (notinline string-trim))
