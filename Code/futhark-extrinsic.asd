@@ -30,4 +30,5 @@
    (:file "string-capitalize")
    (:file "string-left-trim")
    (:file "string-right-trim")
+   (:file "string-trim")
    (:file "condition-types")))
