@@ -8,8 +8,8 @@ t = test
 c___ string
 c___ stringp
 c___ make-string
-cdm_ string=
-cdm_ string-equal
+cdmt string=
+cdmt string-equal
 cdm_ string/=
 cdm_ string-not-equal
 cdm_ string<
