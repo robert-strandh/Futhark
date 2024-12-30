@@ -22,3 +22,25 @@
   (if (two-string-compiler-macro-possible-p arguments)
       (compute-two-string-compiler-macro arguments 'string-not-lessp-core)
       form))
+
+(setf (documentation 'string-not-lessp 'function)
+      (format nil
+              "Syntax: string-not-lessp string1 string2 &key start1 end1 start2 end2~@
+               ~@
+               ~a  If the two intervals are equal, then~@
+               this function returns the value designated by END1.~@
+               The characters are compared using the functions~@
+               CHAR-GREATERP and CHAR-EQUAL.~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *a-string-is-greater*
+              *string1-and-string2-are-string-designators*
+              *this-function-calls-the-string-function*
+              *start1/2-and-end1/2-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))

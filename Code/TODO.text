@@ -19,7 +19,7 @@ cdm_ string-greaterp
 cdm_ string<=
 cdm_ string-not-greaterp
 cdm_ string>=
-c_m_ string-not-lessp
+cdm_ string-not-lessp
 c_m_ nstring-upcase
 c_m_ string-upcase
 c_m_ nstring-downcase
