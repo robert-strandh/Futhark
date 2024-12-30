@@ -11,7 +11,7 @@ c___ make-string
 cdm_ string=
 cdm_ string-equal
 cdm_ string/=
-c_m_ string-not-equal
+cdm_ string-not-equal
 cdm_ string<
 cdm_ string-lessp
 cdm_ string>

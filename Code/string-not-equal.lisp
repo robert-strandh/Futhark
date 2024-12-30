@@ -21,3 +21,22 @@
   (if (two-string-compiler-macro-possible-p arguments)
       (compute-two-string-compiler-macro arguments 'string-not-equal-core)
       form))
+
+(setf (documentation 'string-not-equal 'function)
+      (format nil
+              "Syntax: string-not-equal string1 string2 &key start1 end1 start2 end2~@
+               ~@
+               ~a CHAR-EQUAL.~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *if-strings-are-not-equal*
+              *string1-and-string2-are-string-designators*
+              *this-function-calls-the-string-function*
+              *start1/2-and-end1/2-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
