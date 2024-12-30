@@ -71,4 +71,14 @@
            intervals differ, as a an offset from the start of~@
            STRING1."))
 
+(defparameter *if-strings-are-not-equal*
+  (format nil
+          "If the interval of STRING1 designated by START1 and~@
+           END1 is not equal to the interval of STRING2 designated~@
+           by START2 and END2, then this function returns the index~@
+           of the first position at which the two intervals differ,~@
+           as a an offset from the start of STRING1.  Otherwise~@
+           this function returns NIL.  The characters are compared~@
+           using the function"))
+
 ; LocalWords:  designator designators
