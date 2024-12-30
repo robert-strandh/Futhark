@@ -32,3 +32,18 @@
    (:file "string-right-trim")
    (:file "string-trim")
    (:file "condition-types")))
+
+(asdf:defsystem "futhark-extrinsic/ansi-test"
+  :description "ANSI Test system for Constrictor"
+  :license "BSD"
+  :author ("Robert Strandh")
+  :depends-on ("constrictor-extrinsic"
+               "ansi-test-harness")
+  :perform (asdf:test-op (op c)
+             (uiop:symbol-call :constrictor-extrinsic/ansi-test :test))
+  :components ((:module code
+                :pathname "ansi-test/"
+                :serial t
+                :components ((:file "packages")
+                             (:file "test")
+                             (:static-file "expected-failures.sexp")))))
