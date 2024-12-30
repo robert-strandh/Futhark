@@ -5,8 +5,8 @@ m = compiler macro
 n = no compiler macro required.
 t = test
 
-c___ string
-c___ stringp
+c_n_ string
+c_n_ stringp
 c___ make-string
 cdmt string=
 cdmt string-equal
