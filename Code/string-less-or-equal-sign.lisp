@@ -30,7 +30,7 @@
                ~a  If the two intervals are equal, then~@
                this function returns the value designated by END1.~@
                The characters are compared using the functions CHAR<~@
-               and CHAR=.
+               and CHAR=.~@
                ~@
                ~a~@
                ~@
