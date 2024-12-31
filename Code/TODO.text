@@ -22,7 +22,7 @@ cdm_ string>=
 cdm_ string-not-lessp
 cdm_ nstring-upcase
 c_m_ string-upcase
-c_m_ nstring-downcase
+cdm_ nstring-downcase
 c_m_ string-downcase
 c_m_ nstring-capitalize
 c_m_ string-capitalize
