@@ -2,11 +2,15 @@
 
 (defvar *tests*
   '("STRING=."
-    "STRING-EQUAL."))
+    "STRING-EQUAL."
+    "STRING/="
+    "STRING-NOT-EQUAL"))
 
 (defvar *extrinsic-symbols*
   '(futhark:string=
-    futhark:string-equal))
+    futhark:string-equal
+    futhark:string/=
+    futhark:string-not-equal))
 
 (defun test (&rest args)
   (let ((system (asdf:find-system :futhark-extrinsic/ansi-test)))

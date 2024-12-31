@@ -10,8 +10,8 @@ c_n_ stringp
 c___ make-string
 cdmt string=
 cdmt string-equal
-cdm_ string/=
-cdm_ string-not-equal
+cdmt string/=
+cdmt string-not-equal
 cdm_ string<
 cdm_ string-lessp
 cdm_ string>
