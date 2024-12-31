@@ -22,3 +22,23 @@
   (if (one-string-compiler-macro-possible-p arguments)
       (compute-one-string-compiler-macro arguments 'nstring-upcase-core)
       form))
+
+(setf (documentation 'nstring-upcase 'function)
+      (format nil
+              "Syntax: nstring-upcase string &key start end~@
+               ~@
+               The characters in the interval of STRING designated~@
+               by START and END are converted to uppercase by a call~@
+               to CHAR-UPCASE.~@
+               ~@
+               If STRING is not a string, an error of type TYPE-ERROR~@
+               is signaled.~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *start-and-end-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
+
+               
+               
