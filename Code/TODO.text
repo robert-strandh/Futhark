@@ -12,8 +12,8 @@ cdmt string=
 cdmt string-equal
 cdmt string/=
 cdmt string-not-equal
-cdm_ string<
-cdm_ string-lessp
+cdmt string<
+cdmt string-lessp
 cdm_ string>
 cdm_ string-greaterp
 cdm_ string<=
