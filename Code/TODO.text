@@ -6,7 +6,7 @@ n = no compiler macro required.
 t = test
 
 cdn_ string
-c_n_ stringp
+cdn_ stringp
 c___ make-string
 cdmt string=
 cdmt string-equal
