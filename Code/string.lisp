@@ -2,6 +2,11 @@
 
 (defgeneric string (object))
 
+(defmethod string (object)
+  (error 'type-error
+         :datum object
+         :expected-type '(or cl:string symbol character)))
+
 (defmethod string ((object cl:string))
   object)
 
