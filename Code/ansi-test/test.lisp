@@ -8,7 +8,9 @@
     "STRING<."
     "STRING-LESSP."
     "STRING>."
-    "STRING-GREATERP."))
+    "STRING-GREATERP."
+    "STRING<=."
+    "STRING-NOT-GREATERP."))
 
 (defvar *extrinsic-symbols*
   '(futhark:string=
@@ -18,7 +20,9 @@
     futhark:string<
     futhark:string-lessp
     futhark:string>
-    futhark:string-greaterp))
+    futhark:string-greaterp
+    futhark:string<=
+    futhark:string-not-greaterp))
 
 (defun test (&rest args)
   (let ((system (asdf:find-system :futhark-extrinsic/ansi-test)))
