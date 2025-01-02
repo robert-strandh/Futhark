@@ -18,8 +18,8 @@ cdmt string>
 cdmt string-greaterp
 cdmt string<=
 cdmt string-not-greaterp
-cdm_ string>=
-cdm_ string-not-lessp
+cdmt string>=
+cdmt string-not-lessp
 cdm_ nstring-upcase
 c_m_ string-upcase
 cdm_ nstring-downcase
