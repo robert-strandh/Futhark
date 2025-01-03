@@ -7,7 +7,7 @@
       ((string1 start1 end1) (string2 start2 end2))
     (multiple-value-bind (result index)
         (compare-equal string1 start1 end1 string2 start2 end2)
-    (ecase result (> index) ((< =) nil)))))
+      (ecase result (> index) ((< =) nil)))))
 
 (declaim (notinline string-greaterp-core))
 
