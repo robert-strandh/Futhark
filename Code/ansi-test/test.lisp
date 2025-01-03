@@ -1,7 +1,8 @@
 (cl:in-package #:futhark-test)
 
 (defvar *tests*
-  '("STRING=."
+  '("STRINGP."
+    "STRING=."
     "STRING-EQUAL."
     "STRING/=."
     "STRING-NOT-EQUAL."
@@ -15,7 +16,8 @@
     "STRING-NOT-LESSP."))
 
 (defvar *extrinsic-symbols*
-  '(futhark:string=
+  '(futhark:stringp
+    futhark:string=
     futhark:string-equal
     futhark:string/=
     futhark:string-not-equal
