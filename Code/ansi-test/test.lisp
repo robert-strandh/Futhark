@@ -2,6 +2,7 @@
 
 (defvar *tests*
   '("STRINGP."
+    "MAKE-STRING."
     "STRING=."
     "STRING-EQUAL."
     "STRING/=."
@@ -17,6 +18,7 @@
 
 (defvar *extrinsic-symbols*
   '(futhark:stringp
+    futhark:make-string
     futhark:string=
     futhark:string-equal
     futhark:string/=
