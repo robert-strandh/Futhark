@@ -7,7 +7,7 @@ t = test
 
 cdn_ string
 cdnt stringp
-c___ make-string
+cd__ make-string
 cdmt string=
 cdmt string-equal
 cdmt string/=
