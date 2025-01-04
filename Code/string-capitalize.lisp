@@ -13,8 +13,8 @@
                   (setf state nil))
               (when (alphanumericp character)
                 (setf character (char-upcase character))
-                (setf state t))))))
-    string))
+                (setf state t))))
+        string))))
 
 (declaim (notinline string-capitalize))
 
