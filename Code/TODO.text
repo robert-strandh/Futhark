@@ -22,8 +22,8 @@ cdmt string>=
 cdmt string-not-lessp
 cdmt nstring-upcase
 c_mt string-upcase
-cdm_ nstring-downcase
-c_m_ string-downcase
+cdmt nstring-downcase
+c_mt string-downcase
 c_m_ nstring-capitalize
 c_m_ string-capitalize
 cdn_ string-left-trim
