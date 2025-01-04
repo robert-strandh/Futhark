@@ -94,10 +94,10 @@
 (defmacro with-canonicalized-and-checked-string
     (((string1-var start1-var end1-var))
      &body body)
-  `(let ((,string1-var (string ,string1-var))
-         (,end1-var (if (null ,end1-var)
-                        (length ,string1-var)
-                        ,end1-var)))
+  `(let* ((,string1-var (string ,string1-var))
+          (,end1-var (if (null ,end1-var)
+                         (length ,string1-var)
+                         ,end1-var)))
      (check-bounding-indices ,string1-var ,start1-var ,end1-var)
      ,@body))
 
