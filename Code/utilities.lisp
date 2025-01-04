@@ -106,5 +106,7 @@
 
 (defmacro ensure-fresh-string ((string-var) &body body)
   `(let ((,string-var
-           (if (stringp ,string-var) (copy-seq ,string-var) ,string-var)))
+           (cond ((stringp ,string-var) (copy-seq ,string-var))
+                 ((symbolp ,string-var ) (copy-seq (symbol-name ,string-var)))
+                 (t ,string-var))))
      ,@body))
