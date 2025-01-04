@@ -26,9 +26,9 @@ cdmt nstring-downcase
 c_mt string-downcase
 c_mt nstring-capitalize
 c_mt string-capitalize
-cdn_ string-left-trim
-cdn_ string-right-trim
-cdn_ string-trim
+cdnt string-left-trim
+cdnt string-right-trim
+cdnt string-trim
 x___ simple-string-p
 x___ char
 x___ schar

@@ -20,7 +20,10 @@
     "NSTRING-DOWNCASE."
     "STRING-DOWNCASE."
     "NSTRING-CAPITALIZE."
-    "STRING-CAPITALIZE."))
+    "STRING-CAPITALIZE."
+    "STRING-LEFT-TRIM."
+    "STRING-RIGHT-TRIM."
+    "STRING-TRIM."))
 
 (defvar *extrinsic-symbols*
   '(futhark:stringp
@@ -42,7 +45,10 @@
     futhark:nstring-downcase
     futhark:string-downcase
     futhark:nstring-capitalize
-    futhark:string-capitalize))
+    futhark:string-capitalize
+    futhark:string-left-trim
+    futhark:string-right-trim
+    futhark:string-trim))
 
 (defun test (&rest args)
   (let ((system (asdf:find-system :futhark-extrinsic/ansi-test)))
