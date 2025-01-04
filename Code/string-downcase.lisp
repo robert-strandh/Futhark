@@ -6,8 +6,8 @@
   (ensure-fresh-string (string)
     (with-canonicalized-and-checked-string ((string start end))
       (for-each-relevant-character (character string start end)
-        (setf character (char-downcase character))))
-    string))
+        (setf character (char-downcase character)))
+      string)))
 
 (declaim (notinline string-downcase-core))
 
