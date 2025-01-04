@@ -24,8 +24,8 @@ cdmt nstring-upcase
 c_mt string-upcase
 cdmt nstring-downcase
 c_mt string-downcase
-c_m_ nstring-capitalize
-c_m_ string-capitalize
+c_mt nstring-capitalize
+c_mt string-capitalize
 cdn_ string-left-trim
 cdn_ string-right-trim
 cdn_ string-trim
