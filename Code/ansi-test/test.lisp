@@ -16,7 +16,9 @@
     "STRING>=."
     "STRING-NOT-LESSP."
     "NSTRING-UPCASE."
-    "STRING-UPCASE."))
+    "STRING-UPCASE."
+    "NSTRING-DOWNCASE."
+    "STRING-DOWNCASE."))
 
 (defvar *extrinsic-symbols*
   '(futhark:stringp
@@ -34,7 +36,9 @@
     futhark:string>=
     futhark:string-not-lessp
     futhark:nstring-upcase
-    futhark:string-upcase))
+    futhark:string-upcase
+    futhark:nstring-downcase
+    futhark:string-downcase))
 
 (defun test (&rest args)
   (let ((system (asdf:find-system :futhark-extrinsic/ansi-test)))
