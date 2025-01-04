@@ -20,8 +20,8 @@ cdmt string<=
 cdmt string-not-greaterp
 cdmt string>=
 cdmt string-not-lessp
-cdm_ nstring-upcase
-c_m_ string-upcase
+cdmt nstring-upcase
+c_mt string-upcase
 cdm_ nstring-downcase
 c_m_ string-downcase
 c_m_ nstring-capitalize
