@@ -22,3 +22,19 @@
   (if (one-string-compiler-macro-possible-p arguments)
       (compute-one-string-compiler-macro arguments 'string-upcase-core)
       form))
+
+(setf (documentation 'string-upcase 'function)
+      (format nil
+              "Syntax: string-upcase string &key start end~@
+               ~@
+               Return a string which is like STRING, except that each~@
+               character in the interval of STRING designated by START~@
+               and END is converted to uppercase by a call to~@
+               CHAR-UPCASE.~@
+               ~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *start-and-end-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
