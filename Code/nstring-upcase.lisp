@@ -28,7 +28,7 @@
               "Syntax: nstring-upcase string &key start end~@
                ~@
                Each character in the interval of STRING designated by~@
-               START and END are converted to lowercase by a call to~@
+               START and END is converted to uppercase by a call to~@
                CHAR-UPCASE.~@
                ~@
                If STRING is not a string, an error of type TYPE-ERROR~@
