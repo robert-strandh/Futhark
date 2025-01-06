@@ -32,9 +32,14 @@
                and END is converted to uppercase by a call to~@
                CHAR-UPCASE.~@
                ~@
+               ~a~@
+               ~@
+               ~a~@
                ~@
                ~a~@
                ~@
                ~a"
+              *string-is-a-string-designator*
+              *this-function-calls-the-string-function*
               *start-and-end-are-bounding-index-designators*
               *definition-of-bounding-index-designators*))
