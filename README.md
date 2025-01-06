@@ -21,5 +21,6 @@ SBCL is used to test the system, the provided shell script
 `ansi-test-sbcl` can be used.
 
 All provided operators are tested in the test suite, with the
-exception of `string`, because it would require shadowing the name of
-the system class and the ansi-test suite will not work then.
+exception of the function `string`, because it would require shadowing
+the name of the system class and the ansi-test suite will not work
+then.
