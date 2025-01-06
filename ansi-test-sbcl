@@ -1,0 +1,1 @@
+sbcl --eval "(ql:quickload :futhark-extrinsic)" --eval "(ql:quickload :futhark-extrinsic/ansi-test)" --eval "(futhark-test:test :exit t)"
