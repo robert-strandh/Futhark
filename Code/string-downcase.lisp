@@ -22,3 +22,24 @@
   (if (one-string-compiler-macro-possible-p arguments)
       (compute-one-string-compiler-macro arguments 'string-downcase-core)
       form))
+
+(setf (documentation 'string-downcase 'function)
+      (format nil
+              "Syntax: string-downcase string &key start end~@
+               ~@
+               Return a string which is like STRING, except that each~@
+               character in the interval of STRING designated by START~@
+               and END is converted to lowercase by a call to~@
+               CHAR-DOWNCASE.~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a~@
+               ~@
+               ~a"
+              *string-is-a-string-designator*
+              *this-function-calls-the-string-function*
+              *start-and-end-are-bounding-index-designators*
+              *definition-of-bounding-index-designators*))
