@@ -21,7 +21,7 @@ cdmt string-not-greaterp
 cdmt string>=
 cdmt string-not-lessp
 cdmt nstring-upcase
-c_mt string-upcase
+cdmt string-upcase
 cdmt nstring-downcase
 c_mt string-downcase
 c_mt nstring-capitalize
