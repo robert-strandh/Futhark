@@ -7,7 +7,7 @@ t = test
 
 cdn_ string
 cdnt stringp
-cd_t make-string
+cdmt make-string
 cdmt string=
 cdmt string-equal
 cdmt string/=
@@ -24,8 +24,8 @@ cdmt nstring-upcase
 cdmt string-upcase
 cdmt nstring-downcase
 cdmt string-downcase
-c_mt nstring-capitalize
-c_mt string-capitalize
+cdmt nstring-capitalize
+cdmt string-capitalize
 cdnt string-left-trim
 cdnt string-right-trim
 cdnt string-trim
